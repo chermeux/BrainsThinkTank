@@ -38,20 +38,20 @@
                     }
                  ?>
                  <?php
-                 $articles = $bdd->query('SELECT * FROM articles WHERE id=$datestocke ');
-                 $arti = $articles->fetch()
+                 $articles = $bdd->query("SELECT * FROM articles WHERE id='{$idstockeprecedent}'");
+                 $artiun = $articles->fetch();
                  ?>
-                 <a href="<?= $arti['lien'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
+                 <a href="<?= $artiun['lien'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
                      <div id="rectangle_derniersarticles">
-                             <img class="images_article" src="images/articles/<?= $arti['IMAGE'] ?>"/>
-                             <h3><?= $arti['TITRE'] ?></h3>
-                             <p class="dateDeModif"> <?= $arti['DATEDEMODIF'] ?></p>
+                             <img class="images_article" src="images/articles/<?= $artiun['IMAGE'] ?>"/>
+                             <h3><?= $artiun['TITRE'] ?></h3>
+                             <p class="dateDeModif"> <?= $artiun['DATEDEMODIF'] ?></p>
                      </div>
                  </a>
 
                  <?php
-                 $articles = $bdd->query('SELECT * FROM articles WHERE id=$idstocke');
-                 $artiDeux = $articles->fetch()
+                 $articles = $bdd->query("SELECT * FROM articles WHERE id='{$idstocke}'");
+                 $artiDeux = $articles->fetch();
                  ?>
                  <a href="<?= $artiDeux['lien'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
                      <div id="rectangle_derniersarticles">
