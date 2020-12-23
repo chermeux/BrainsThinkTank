@@ -25,17 +25,43 @@
                     $idstocke = "0";
                     $idstockeprecedent = "00/00/0000";
                     $articles = $bdd->query('SELECT * FROM articles');
-                    while($arti = $articles->fetch()) {
+                    while($arti = $articles->fetch())
+                    {
                         if($arti['date_publi']>$datestocke) {
                             $idstockeprecedent = $idstocke;
                             $idstocke = $arti['id'];
                             $datestocke=$arti['date_publi'];
                             /*on lit la base articles, toutes les lignes et on stocke les deux id des articles qui
-                            ont été publiés en dernier, comme ça ensuite on pourra afficher deux cadre avec les deux
+                            ont été publiés en dernier, comme ça ensuite on pourra afficher deux cadres avec les deux
                             dernières publications */
                        }
                     }
                  ?>
+                 <?php
+                 $articles = $bdd->query('SELECT * FROM articles WHERE id=$datestocke ');
+                 $arti = $articles->fetch()
+                 ?>
+                 <a href="<?= $arti['lien'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
+                     <div id="rectangle_derniersarticles">
+                             <img class="images_article" src="images/articles/<?= $arti['IMAGE'] ?>"/>
+                             <h3><?= $arti['TITRE'] ?></h3>
+                             <p class="dateDeModif"> <?= $arti['DATEDEMODIF'] ?></p>
+                     </div>
+                 </a>
+
+                 <?php
+                 $articles = $bdd->query('SELECT * FROM articles WHERE id=$idstocke');
+                 $artiDeux = $articles->fetch()
+                 ?>
+                 <a href="<?= $artiDeux['lien'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
+                     <div id="rectangle_derniersarticles">
+                         <img class="images_article" src="images/articles/<?= $artiDeux['IMAGE'] ?>"/>
+                         <h3><?= $artiDeux['TITRE'] ?></h3>
+                         <p class="dateDeModif"> <?= $artiDeux['DATEDEMODIF'] ?></p>
+                     </div>
+                 </a>
+
+
              </article>
              <article>
                  <h2>Nos prochains événements</h2>
