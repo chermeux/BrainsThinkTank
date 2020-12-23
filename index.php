@@ -66,8 +66,48 @@
              <article>
                  <h2>Nos prochains événements</h2>
                  <?php
-
+                 $datestocke = "00/00/0000";
+                 $idstocke = "0";
+                 $idstockeprecedent = "00/00/0000";
+                 $evenement = $bdd->query('SELECT * FROM evenement');
+                 while($event = $evenement->fetch())
+                 {
+                     if($event['date_publi']>$datestocke) {
+                         $idstockeprecedent = $idstocke;
+                         $idstocke = $event['id'];
+                         $datestocke=$event['date_publi'];
+                     }
+                 }
                  ?>
+                 <?php
+                 $evenement = $bdd->query("SELECT * FROM evenement WHERE id='{$idstockeprecedent}'");
+                 $eventun = $evenement->fetch();
+                 ?>
+                 <a href="<?= $eventun['lien'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
+                     <div id="rectangle_derniersarticles">
+                         <img class="images_article" src="images/articles/<?= $eventun['IMAGE'] ?>"/>
+                         <h3><?= $eventun['TITRE'] ?></h3>
+                        <div id="basCadreEvenement">
+                            <p class="dateEvenement"> <?= $eventun['DATE'] ?></p>
+                            <p class="LieuEvenement"> <?= $eventun['LIEU'] ?></p>
+                        </div>
+                     </div>
+                 </a>
+
+                 <?php
+                 $evenement = $bdd->query("SELECT * FROM evenement WHERE id='{$idstockeprecedent}'");
+                 $eventdeux = $evenement->fetch();
+                 ?>
+                 <a href="<?= $eventdeux['lien'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
+                     <div id="rectangle_derniersarticles">
+                         <img class="images_article" src="images/articles/<?= $eventdeux['IMAGE'] ?>"/>
+                         <h3><?= $eventdeux['TITRE'] ?></h3>
+                         <div id="basCadreEvenement">
+                             <p class="dateEvenement"> <?= $eventdeux['DATE'] ?></p>
+                             <p class="LieuEvenement"> <?= $eventdeux['LIEU'] ?></p>
+                         </div>
+                     </div>
+                 </a>
              </article>
          </div>
 
