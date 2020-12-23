@@ -11,12 +11,12 @@
     <body>
         <div>
              <?php include("header.php"); ?>
-        </div>
+         </div>
 
         Hello word
 
-        <div>
+         <div>
              <?php include("footer.php"); ?>
-        </div>
+         </div>
     </body>
 </html>
