@@ -16,7 +16,7 @@
             <div id="barreNav">
                 <nav>
                     <ul>
-                        <li id="Accueil"><a href="index.php">Accueil</a></li>
+                        <li id="accueil"><a href="index.php">Accueil</a></li>
                         <li id="evenement"><a href="Evenements.php">Evenements</a></li>
                         <li id="articles"><a href="articles.php">Articles</a></li>
                         <li id="Club"><a href="Club.php">Club</a></li>
