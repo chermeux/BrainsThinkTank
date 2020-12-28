@@ -13,6 +13,7 @@
     * TEXTE
     * DATE
     * LIEU
+    * LIEN
 # ARTICLES
     * ID
     * IMAGE

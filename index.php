@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" media="screen and (max-width: 1280px)" href="style_petitecran.css"/>
-    <link rel="shortcut icon" href="images/1_generales/logo_brains.ico" /> /* TODO mettre l'image dans le dossier et créer le dossier */
+    <link rel="shortcut icon" href="images/1_generales/logo_brains.ico" /> //TODO mettre l'image dans le dossier et créer le dossier
     <title>Brains Think Tank</title>
 </head>
 
@@ -24,7 +24,7 @@
         $datestocke = "00/00/0000";
         $idstocke = "0";
         $idstockeprecedent = "00/00/0000";
-        $articles = $bdd->query('SELECT * FROM articles');
+        $articles = $bdd->query('SELECT * FROM ARTICLES');
         while($arti = $articles->fetch())
         {
             if($arti['date_publi']>$datestocke) {
@@ -38,7 +38,7 @@
         }
         ?>
         <?php
-        $articles = $bdd->query("SELECT * FROM articles WHERE id='{$idstockeprecedent}'");
+        $articles = $bdd->query("SELECT * FROM ARTICLES WHERE ID='{$idstockeprecedent}'");
         $artiun = $articles->fetch();
         ?>
         <a href="<?= $artiun['lien'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
@@ -50,7 +50,7 @@
         </a>
 
         <?php
-        $articles = $bdd->query("SELECT * FROM articles WHERE id='{$idstocke}'");
+        $articles = $bdd->query("SELECT * FROM ARTICLES WHERE ID='{$idstocke}'");
         $artiDeux = $articles->fetch();
         ?>
         <a href="<?= $artiDeux['lien'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
@@ -69,21 +69,21 @@
         $datestocke = "00/00/0000";
         $idstocke = "0";
         $idstockeprecedent = "00/00/0000";
-        $evenement = $bdd->query('SELECT * FROM evenement');
+        $evenement = $bdd->query('SELECT * FROM EVENEMENT');
         while($event = $evenement->fetch())
         {
-            if($event['date_publi']>$datestocke) {
+            if($event['DATE']>$datestocke) {
                 $idstockeprecedent = $idstocke;
-                $idstocke = $event['id'];
-                $datestocke=$event['date_publi'];
+                $idstocke = $event['ID'];
+                $datestocke=$event['DATE'];
             }
         }
         ?>
         <?php
-        $evenement = $bdd->query("SELECT * FROM evenement WHERE id='{$idstockeprecedent}'");
+        $evenement = $bdd->query("SELECT * FROM EVENEMENT WHERE ID='{$idstockeprecedent}'");
         $eventun = $evenement->fetch();
         ?>
-        <a href="<?= $eventun['lien'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
+        <a href="<?= $eventun['LIEN'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
             <div id="rectangle_derniersarticles">
                 <img class="images_article" src="images/articles/<?= $eventun['IMAGE'] ?>"/>
                 <h3><?= $eventun['TITRE'] ?></h3>
@@ -95,10 +95,10 @@
         </a>
 
         <?php
-        $evenement = $bdd->query("SELECT * FROM evenement WHERE id='{$idstockeprecedent}'");
+        $evenement = $bdd->query("SELECT * FROM EVENEMENT WHERE ID='{$idstockeprecedent}'");
         $eventdeux = $evenement->fetch();
         ?>
-        <a href="<?= $eventdeux['lien'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
+        <a href="<?= $eventdeux['LIEN'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
             <div id="rectangle_derniersarticles">
                 <img class="images_article" src="images/articles/<?= $eventdeux['IMAGE'] ?>"/>
                 <h3><?= $eventdeux['TITRE'] ?></h3>
