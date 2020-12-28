@@ -30,8 +30,6 @@ if (isset($_GET["s"]) AND $_GET["s"] == "Rechercher")
 }
 ?>
 
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
     <head>
@@ -71,34 +69,17 @@ if (isset($_GET["s"]) AND $_GET["s"] == "Rechercher")
         <h2>Tous nos articles ! </h2>
         <article>
             <?php
-            $datestocke = "00/00/0000";
-            $idstocke = "0";
-            $idstockeprecedent = "00/00/0000";
             $articles = $bdd->query('SELECT * FROM ARTICLES');
             while($arti = $articles->fetch())
-            {
-                if($arti['date_publi']>$datestocke) {
-                    $idstockeprecedent = $idstocke;
-                    $idstocke = $arti['id'];
-                    $datestocke=$arti['date_publi'];
-                    /*on lit la base articles, toutes les lignes et on stocke les deux id des articles qui
-                    ont été publiés en dernier, comme ça ensuite on pourra afficher deux cadres avec les deux
-                    dernières publications */
-                }
-            }
-            ?>
-            <?php
-            $articles = $bdd->query("SELECT * FROM ARTICLES WHERE ID='{$idstockeprecedent}'");
-            $artiun = $articles->fetch();
-            ?>
-            <a href="<?= $artiun['LIEN'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
-                <div id="rectangle_derniersarticles">
-                    <img class="images_article" src="images/articles/<?= $artiun['IMAGE'] ?>"/>
-                    <h3><?= $artiun['TITRE'] ?></h3>
-                    <p class="dateDeModif"> <?= $artiun['DATEDEMODIF'] ?></p>
-                </div>
-            </a>
-
+            {?>
+                <a href="<?= $arti['LIEN'] ?>" target="_blank">
+                    <div id="rectangle_derniersarticles">
+                        <img class="images_article" src="images/articles/<?= $arti['IMAGE'] ?>"/>
+                        <h3><?= $arti['TITRE'] ?></h3>
+                        <p class="dateDeModif"> <?= $arti['DATEDEMODIF'] ?></p>
+                    </div>
+                </a>
+            <?=}?>
         </article>
     </div>
 
