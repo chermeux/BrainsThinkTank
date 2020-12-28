@@ -17,7 +17,7 @@
                 <nav>
                     <ul>
                         <li id="accueil"><a href="index.php">Accueil</a></li>
-                        <li id="evenement"><a href="Evenements.php">Evenements</a></li>
+                        <li id="evenement"><a href="evenements.php">Evenements</a></li>
                         <li id="articles"><a href="articles.php">Articles</a></li>
                         <li id="club"><a href="club.php">Club</a></li>
                         <li id="contact"><a href="contact.php">Contact</a></li>
