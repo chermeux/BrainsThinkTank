@@ -20,6 +20,7 @@
     * TITRE
     * TEXTE
     * DATEDERMODIF
+    * LIEN
 # CLUBS
     * ID
     * IMAGE

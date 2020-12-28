@@ -66,7 +66,7 @@ if (isset($_POST['deconnexion'])) {
         </div>
     <?php endif; ?>
     <div class="alert alert-info container border border-info m-5 mx-auto" role="alert">
-        Cette page est reserver au administateur du site si vous en etes pas un merci de revenir a la <a href="../index.php" class="alert-link">Page principale</a>
+        Cette page est reserver au administateur du site si vous en etes pas un merci de revenir a la <a href="../pages/index.php" class="alert-link">Page principale</a>
     </div>
     <?php if (! isset($_SESSION["admin"]) || $_SESSION["admin"] == 0): ?>
     <form method="post" action="/admin/connexion.php" class="container border border-secondary border-2 rounded-3 m-5 mx-auto p-2">
