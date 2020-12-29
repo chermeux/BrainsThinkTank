@@ -2,7 +2,6 @@
 
 <?php
 if (isset($_POST["connexion"])) {
-    echo "test";
     # Teste de la validite de lemail et du mot de passe
     $email_valide = TRUE;
     $password_valide = TRUE;
@@ -22,7 +21,7 @@ if (isset($_POST["connexion"])) {
         if ($donne = $req->fetch()) {
             if (password_verify($_POST["password"], $donne["password"])) {
                 $message = "Connection reusie";
-                $_SESSION['admin'] = 1;
+                $_SESSION["admin"] = TRUE;
             } else {
                 $error = "Mot de pass invalid";
                 $password_valide = FALSE;
@@ -35,11 +34,11 @@ if (isset($_POST["connexion"])) {
     }
 }
 if (isset($_POST['deconnexion'])) {
-    if (! isset($_SESSION["admin"]) or $_SESSION["admin"] != 1) {
+    if (! isset($_SESSION["admin"]) or ! $_SESSION["admin"]) {
         $error = "Vous n'etes pas connecter vous ne pouver donc pas vous deconecter";
     }
     else{
-        $_SESSION["admin"] = 0;
+        $_SESSION["admin"] = FALSE;
         $message = "Deconnexion Reussi";
     }
 }
@@ -66,17 +65,18 @@ if (isset($_POST['deconnexion'])) {
         </div>
     <?php endif; ?>
     <div class="alert alert-info container border border-info m-5 mx-auto" role="alert">
-        Cette page est reserver au administateur du site si vous en etes pas un merci de revenir a la <a href="../pages/index.php" class="alert-link">Page principale</a>
+        Cette page est reserver au administateur du site si vous en etes pas un merci de revenir a la <a href="../index.php" class="alert-link">Page principale</a>
     </div>
-    <?php if (! isset($_SESSION["admin"]) || $_SESSION["admin"] == 0): ?>
+    <?php if (! isset($_SESSION["admin"]) || ! $_SESSION["admin"]): ?>
     <form method="post" action="/admin/connexion.php" class="container border border-secondary border-2 rounded-3 m-5 mx-auto p-2">
-        <div class="mb-3">
-            <label for="email" class="form-label">Adresse email</label>
-            <input type="email" class="form-control <?php if (isset($email_valide)) {echo (! $email_valide) ? "is-invalid":"valide";}?>" value="<?php if (isset($_POST["email"])) {echo $_POST["email"];}?>" name="email" required>
+        <div class="form-floating mb-3">
+
+            <input id="email" type="email" class="form-control <?php if (isset($email_valide)) {echo (! $email_valide) ? "is-invalid":"valide";}?>" value="<?php if (isset($_POST["email"])) {echo $_POST["email"];}?>" name="email" required>
+            <label for="email">Adresse email</label>
         </div>
-        <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control <?php if (isset($password_valide)) {echo (! $password_valide) ? "is-invalid":"valide";}?>" value="<?php if (isset($_POST["password"])) {echo $_POST["password"];}?>" name="password" required>
+        <div class="form-floating mb-3">
+            <input id="password" type="password" class="form-control <?php if (isset($password_valide)) {echo (! $password_valide) ? "is-invalid":"valide";}?>" value="<?php if (isset($_POST["password"])) {echo $_POST["password"];}?>" name="password" required>
+            <label for="password">Password</label>
         </div>
         <div class="mb-3">
             <input type="submit" class="btn btn-primary" value="connexion">
