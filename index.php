@@ -71,6 +71,7 @@
         $datestocke = "00/00/0000";
         $idstocke = "0";
         $idstockeprecedent = "00/00/0000";
+        $bdd = new PDO('mysql:host=localhost;dbname=brains;charset=utf8', 'root', 'root');
         $evenement = $bdd->query('SELECT * FROM EVENEMENT');
         while($event = $evenement->fetch())
         {
