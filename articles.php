@@ -62,9 +62,7 @@ if (isset($_GET["s"]) AND $_GET["s"] == "Rechercher")
                 <p class="dateDeModif"> <?= $terme_trouve['DATEDEMODIF'] ?></p>
             </div>
             </a>
-            <?=}
-            $select_terme->closeCursor();
-            ?>
+            <?=}?>
         </div>
         <h2>Tous nos articles ! </h2>
         <article>
