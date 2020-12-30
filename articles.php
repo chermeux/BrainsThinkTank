@@ -62,7 +62,7 @@ if (isset($_GET["s"]) AND $_GET["s"] == "Rechercher")
                 <p class="dateDeModif"> <?= $terme_trouve['DATEDEMODIF'] ?></p>
             </div>
             </a>
-            <?=}?>
+         <?php}?>
         </div>
         <h2>Tous nos articles ! </h2>
         <article>
@@ -77,7 +77,7 @@ if (isset($_GET["s"]) AND $_GET["s"] == "Rechercher")
                         <p class="dateDeModif"> <?= $arti['DATEDEMODIF'] ?></p>
                     </div>
                 </a>
-            <?=}?>
+            <?php}?>
         </article>
     </div>
 
