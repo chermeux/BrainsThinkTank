@@ -24,6 +24,7 @@
         $datestocke = "00/00/0000";
         $idstocke = "0";
         $idstockeprecedent = "00/00/0000";
+        $bdd = new PDO('mysql:host=localhost;dbname=brains;charset=utf8', 'root', 'root');
         $articles = $bdd->query('SELECT * FROM ARTICLES');
         while($arti = $articles->fetch())
         {
@@ -56,7 +57,7 @@
         ?>
         <a href="<?= $artiDeux['LIEN'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
             <div id="rectangle_derniersarticles">
-                <img class="images_article" src="images/articles/<?= $artiDeux['IMAGE'] ?>"/>
+                <img class="images_article" src="images/articles/<?= $artiDeux['IMAGE'] ?>">
                 <h3><?= $artiDeux['TITRE'] ?></h3>
                 <p class="dateDeModif"> <?= $artiDeux['DATEDEMODIF'] ?></p>
             </div>
