@@ -43,7 +43,7 @@
         $articles = $bdd->query("SELECT * FROM ARTICLES WHERE ID='{$idstockeprecedent}'");
         $artiun = $articles->fetch();
         ?>
-        <a href="<?= $artiun['LIEN'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
+        <a href="<?= $artiun['LIEN'] ?>" target="_blank"> <!--TODO Rajouter lien dans bdd -->
             <div id="rectangle_derniersarticles">
                 <img class="images_article" src="images/articles/<?= $artiun['IMAGE'] ?>"/>
                 <h3><?= $artiun['TITRE'] ?></h3>
@@ -75,10 +75,17 @@
         $evenement = $bdd->query('SELECT * FROM EVENEMENT');
         while($event = $evenement->fetch())
         {
-            if($event['DATE']>$datestocke) {
+            if($event['DATE']>$datestocke)
+            {
                 $idstockeprecedent = $idstocke;
                 $idstocke = $event['ID'];
                 $datestocke=$event['DATE'];
+            }
+            else
+            {
+                $idstockeprecedent = $idstockeprecedent;
+                $idstocke=$idstocke;
+                $datestocke=$datestocke;
             }
         }
         ?>
