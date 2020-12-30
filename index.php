@@ -81,12 +81,6 @@
                 $idstocke = $event['ID'];
                 $datestocke=$event['DATE'];
             }
-            else
-            {
-                $idstockeprecedent = $idstockeprecedent;
-                $idstocke=$idstocke;
-                $datestocke=$datestocke;
-            }
         }
         ?>
         <?php
