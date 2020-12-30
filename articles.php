@@ -55,11 +55,11 @@ if (isset($_GET["s"]) AND $_GET["s"] == "Rechercher")
             while($terme_trouve = $select_terme->fetch())
             {?>
 
-            <a href="<?= $terme_trouve['LIEN'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
+            <a href="<?php $terme_trouve['LIEN'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
             <div id="rectangle_derniersarticles">
-                <img class="images_article" src="images/articles/<?= $terme_trouve['IMAGE'] ?>"/>
-                <h3><?= $terme_trouve['TITRE'] ?></h3>
-                <p class="dateDeModif"> <?= $terme_trouve['DATEDEMODIF'] ?></p>
+                <img class="images_article" src="images/articles/<?php $terme_trouve['IMAGE'] ?>"/>
+                <h3><?php $terme_trouve['TITRE'] ?></h3>
+                <p class="dateDeModif"> <?php $terme_trouve['DATEDEMODIF'] ?></p>
             </div>
             </a>
          <?php}?>
@@ -70,11 +70,11 @@ if (isset($_GET["s"]) AND $_GET["s"] == "Rechercher")
             $articles = $bdd->query('SELECT * FROM ARTICLES');
             while($arti = $articles->fetch())
             {?>
-                <a href="<?= $arti['LIEN'] ?>" target="_blank">
+                <a href="<?php $arti['LIEN'] ?>" target="_blank">
                     <div id="rectangle_derniersarticles">
-                        <img class="images_article" src="images/articles/<?= $arti['IMAGE'] ?>"/>
-                        <h3><?= $arti['TITRE'] ?></h3>
-                        <p class="dateDeModif"> <?= $arti['DATEDEMODIF'] ?></p>
+                        <img class="images_article" src="images/articles/<?php $arti['IMAGE'] ?>"/>
+                        <h3><?php $arti['TITRE'] ?></h3>
+                        <p class="dateDeModif"> <?php $arti['DATEDEMODIF'] ?></p>
                     </div>
                 </a>
             <?php}?>
