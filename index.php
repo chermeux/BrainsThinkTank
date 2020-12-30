@@ -83,6 +83,7 @@
         }
         ?>
         <?php
+        $bdd = new PDO('mysql:host=localhost;dbname=brains;charset=utf8', 'root', 'root');
         $evenement = $bdd->query("SELECT * FROM EVENEMENT WHERE ID='{$idstockeprecedent}'");
         $eventun = $evenement->fetch();
         ?>
@@ -98,6 +99,7 @@
         </a>
 
         <?php
+        $bdd = new PDO('mysql:host=localhost;dbname=brains;charset=utf8', 'root', 'root');
         $evenement = $bdd->query("SELECT * FROM EVENEMENT WHERE ID='{$idstockeprecedent}'");
         $eventdeux = $evenement->fetch();
         ?>
