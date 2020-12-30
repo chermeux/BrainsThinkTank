@@ -38,6 +38,7 @@
         }
         ?>
         <?php
+        $bdd = new PDO('mysql:host=localhost;dbname=brains;charset=utf8', 'root', 'root');
         $articles = $bdd->query("SELECT * FROM ARTICLES WHERE ID='{$idstockeprecedent}'");
         $artiun = $articles->fetch();
         ?>
