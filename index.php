@@ -24,6 +24,7 @@
         $datestocke = "00/00/0000";
         $idstocke = "0";
         $idstockeprecedent = "00/00/0000";
+        $bdd = new PDO('mysql:host=localhost;dbname=brains;charset=utf8', 'root', 'root');
         $articles = $bdd->query('SELECT * FROM ARTICLES');
         while($arti = $articles->fetch())
         {
@@ -42,7 +43,7 @@
         $articles = $bdd->query("SELECT * FROM ARTICLES WHERE ID='{$idstockeprecedent}'");
         $artiun = $articles->fetch();
         ?>
-        <a href="<?= $artiun['LIEN'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
+        <a href="<?= $artiun['LIEN'] ?>" target="_blank"> <!--TODO Rajouter lien dans bdd -->
             <div id="rectangle_derniersarticles">
                 <img class="images_article" src="images/articles/<?= $artiun['IMAGE'] ?>"/>
                 <h3><?= $artiun['TITRE'] ?></h3>
@@ -56,7 +57,7 @@
         ?>
         <a href="<?= $artiDeux['LIEN'] ?>" target="_blank"> // TODO Rajouter lien dans bdd
             <div id="rectangle_derniersarticles">
-                <img class="images_article" src="images/articles/<?= $artiDeux['IMAGE'] ?>"/>
+                <img class="images_article" src="images/articles/<?= $artiDeux['IMAGE'] ?>">
                 <h3><?= $artiDeux['TITRE'] ?></h3>
                 <p class="dateDeModif"> <?= $artiDeux['DATEDEMODIF'] ?></p>
             </div>
@@ -70,10 +71,12 @@
         $datestocke = "00/00/0000";
         $idstocke = "0";
         $idstockeprecedent = "00/00/0000";
+        $bdd = new PDO('mysql:host=localhost;dbname=brains;charset=utf8', 'root', 'root');
         $evenement = $bdd->query('SELECT * FROM EVENEMENT');
         while($event = $evenement->fetch())
         {
-            if($event['DATE']>$datestocke) {
+            if($event['DATE']>$datestocke)
+            {
                 $idstockeprecedent = $idstocke;
                 $idstocke = $event['ID'];
                 $datestocke=$event['DATE'];
@@ -81,6 +84,7 @@
         }
         ?>
         <?php
+        $bdd = new PDO('mysql:host=localhost;dbname=brains;charset=utf8', 'root', 'root');
         $evenement = $bdd->query("SELECT * FROM EVENEMENT WHERE ID='{$idstockeprecedent}'");
         $eventun = $evenement->fetch();
         ?>
@@ -96,6 +100,7 @@
         </a>
 
         <?php
+        $bdd = new PDO('mysql:host=localhost;dbname=brains;charset=utf8', 'root', 'root');
         $evenement = $bdd->query("SELECT * FROM EVENEMENT WHERE ID='{$idstockeprecedent}'");
         $eventdeux = $evenement->fetch();
         ?>
