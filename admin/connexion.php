@@ -71,11 +71,11 @@ if (isset($_POST['deconnexion'])) {
     <form method="post" action="/admin/connexion.php" class="container border border-secondary border-2 rounded-3 m-5 mx-auto p-2">
         <div class="form-floating mb-3">
 
-            <input id="email" type="email" class="form-control <?php if (isset($email_valide)) {echo (! $email_valide) ? "is-invalid":"valide";}?>" value="<?php if (isset($_POST["email"])) {echo $_POST["email"];}?>" name="email" required>
+            <input id="email" type="email" class="form-control <?php if (isset($email_valide)) {echo (! $email_valide) ? "is-invalid":"is-valid";}?>" value="<?php if (isset($_POST["email"])) {echo $_POST["email"];}?>" name="email" required>
             <label for="email">Adresse email</label>
         </div>
         <div class="form-floating mb-3">
-            <input id="password" type="password" class="form-control <?php if (isset($password_valide)) {echo (! $password_valide) ? "is-invalid":"valide";}?>" value="<?php if (isset($_POST["password"])) {echo $_POST["password"];}?>" name="password" required>
+            <input id="password" type="password" class="form-control <?php if (isset($password_valide)) {echo (! $password_valide) ? "is-invalid":"is-valide";}?>" value="<?php if (isset($_POST["password"])) {echo $_POST["password"];}?>" name="password" required>
             <label for="password">Password</label>
         </div>
         <div class="mb-3">
