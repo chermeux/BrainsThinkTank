@@ -1,32 +1,15 @@
 <?php
-try
-{
-    $bdd = new PDO("mysql:host=localhost;dbname=", "root", "");
-    $bdd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$bdd = new PDO("mysql:host=localhost;dbname=", "root", "");
+if (isset($_GET['s'])) {
+    $req = $bdd->prepare("select * from evenements
+                                where match(Titre, texte) against ('?' IN BOOLEAN MODE)
+                                order by match(Titre, texte) against ('?' IN BOOLEAN MODE) DESC
+                                LIMIT 20;");
+    $req->execute([$_GET['s'],$_GET['s']]);
 }
-catch(Exception $e)
-{
-    die("Une erreur a été trouvé : " . $e->getMessage());
-}
-$bdd->query("SET NAMES UTF8");
-
-if (isset($_GET["s"]) AND $_GET["s"] == "Rechercher")
-{
-    $_GET["terme"] = htmlspecialchars($_GET["terme"]); //pour sécuriser le formulaire contre les intrusions html
-    $terme = $_GET["terme"];
-    $terme = trim($terme); //pour supprimer les espaces dans la requête de l'internaute
-    $terme = strip_tags($terme); //pour supprimer les balises html dans la requête
-
-    if (isset($terme))
-    {
-        $terme = strtolower($terme);
-        $select_terme = $bdd->prepare("SELECT TITRE, TEXTE FROM ARTICLES WHERE TITRE LIKE ? OR TEXTE LIKE ?");
-        $select_terme->execute(array("%".$terme."%", "%".$terme."%"));
-    }
-    else
-    {
-        $message = "Vous devez entrer votre requete dans la barre de recherche";
-    }
+else {
+    $req = $bdd->prepare("select * from evenements order by date DESC limit 20");
+    $req->execute();
 }
 ?>
 
