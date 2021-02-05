@@ -9,7 +9,9 @@
        </div>
 
        <div id="bas_footer">
-          <li id="Numero"><p>Numéro de téléphone</p></li>
-          <li id="mail"><p>Agora@gmail.com</p></li>
+           <ul>
+              <li id="Numero"><p>Numéro de téléphone</p></li>
+              <li id="mail"><p>Agora@gmail.com</p></li>
+           </ul>
        </div>
     </footer>
