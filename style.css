@@ -78,8 +78,31 @@ li a
 /**********************************************************************/
 /*Coeur Page Accueil*/
 
+article h2
+{
+    font-size: 2.5em;
+}
+
 #PresentationAgora{
-    border: 2px rgb(81,130,198) solid;
+    border: 0px rgb(81,130,198) solid;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: 75px;
+}
+
+#DerniersArticles
+{
+    border: 0px rgb(81,130,198) solid;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: 75px;
+}
+
+#ProcahinsEvenements
+{
+    border: 0px rgb(81,130,198) solid;
     display: flex;
     flex-wrap: wrap;
     width: 90%;
