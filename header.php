@@ -11,7 +11,7 @@
             <?php endif; ?>
 
             <div id="logo">
-                <a href="index.php"><img src="images/1_generales/logo_brains.png" alt="Brains Think Tank" /></a>
+                <a href="index.php"><img src="images/1_generales/Logo_agora.png" alt="Brains Think Tank" /></a>
             </div>
             <div id="barreNav">
                 <nav>
@@ -19,7 +19,6 @@
                         <li id="accueil"><a href="index.php">Accueil</a></li>
                         <li id="evenement"><a href="evenements.php">Evenements</a></li>
                         <li id="articles"><a href="articles.php">Articles</a></li>
-                        <li id="club"><a href="club.php">Club</a></li>
                         <li id="contact"><a href="contact.php">Contact</a></li>
                     </ul>
                 </nav>
