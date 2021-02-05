@@ -1,14 +1,14 @@
 <?php
 $bdd = new PDO("mysql:host=localhost;dbname=", "root", "");
 if (isset($_GET['s'])) {
-    $req = $bdd->prepare("select * from evenements
+    $req = $bdd->prepare("select * from evenement
                                 where match(Titre, texte) against ('?' IN BOOLEAN MODE)
                                 order by match(Titre, texte) against ('?' IN BOOLEAN MODE) DESC
-                                LIMIT 20;");
+                                LIMIT 20");
     $req->execute([$_GET['s'],$_GET['s']]);
 }
 else {
-    $req = $bdd->prepare("select * from evenements order by date DESC limit 20");
+    $req = $bdd->prepare("select * from evenement order by date DESC limit 20");
     $req->execute();
 }
 ?>
@@ -20,7 +20,7 @@ else {
         <link rel="stylesheet" href="style.css"/>
         <link rel="stylesheet" media="screen and (max-width: 1280px)" href="style_petitecran.css"/>
         <link rel="shortcut icon" href="images/1_generales/logo_brains.ico" /> //TODO mettre l'image dans le dossier et créer le dossier
-        <title>Brains Think Tank</title>
+        <title>Agora</title>
     </head>
 
 <body>
