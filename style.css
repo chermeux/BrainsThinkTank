@@ -27,6 +27,10 @@ body
     margin-right: 150px;
 }
 
+#accueil2 #accueil
+{
+    /*mettre ici la couleur quand on est sur la page index*/
+}
 
 #evenement
 {

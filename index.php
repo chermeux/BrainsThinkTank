@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<div>
+<div id="accueil2">
     <?php include("header.php"); ?>
 </div>
 
