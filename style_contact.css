@@ -1,0 +1,8 @@
+/*********************************************************************/
+/* Eléments principaux de la page */
+
+#image_agora_contact
+{
+    display: flex;
+    justify-content: center;
+}
