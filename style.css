@@ -135,6 +135,7 @@ ul
     background-color : rgb(181,219, 255);
     display: flex;
     flex-direction: row;
+    margin-left: 200px;
 }
 
 #bas_footer

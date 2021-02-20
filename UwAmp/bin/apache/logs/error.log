@@ -603,3 +603,95 @@
 [Sat Feb 20 14:26:03.094433 2021] [ssl:warn] [pid 10236:tid 624] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
 [Sat Feb 20 14:26:03.094433 2021] [ssl:warn] [pid 10236:tid 624] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
 [Sat Feb 20 14:26:03.134366 2021] [mpm_winnt:notice] [pid 10236:tid 624] AH00354: Child: Starting 64 worker threads.
+[Sat Feb 20 15:05:19.070487 2021] [ssl:warn] [pid 17736:tid 564] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:05:19.071485 2021] [ssl:warn] [pid 17736:tid 564] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+AH00112: Warning: DocumentRoot [C:/Users/J/PhpstormProjects/BrainsThinkTank] does not exist
+[Sat Feb 20 15:05:19.174829 2021] [core:warn] [pid 17736:tid 564] AH00098: pid file C:/Users/cleme/PhpstormProjects/BrainsThinkTank/UwAmp/bin/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Feb 20 15:05:19.309937 2021] [ssl:warn] [pid 17736:tid 564] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Feb 20 15:05:19.310928 2021] [ssl:warn] [pid 17736:tid 564] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:05:19.310928 2021] [ssl:warn] [pid 17736:tid 564] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Feb 20 15:05:19.382736 2021] [mpm_winnt:notice] [pid 17736:tid 564] AH00455: Apache/2.4.18 (Win32) OpenSSL/1.0.2f PHP/7.0.3 configured -- resuming normal operations
+[Sat Feb 20 15:05:19.382736 2021] [mpm_winnt:notice] [pid 17736:tid 564] AH00456: Server built: Jan 28 2016 09:58:25
+[Sat Feb 20 15:05:19.382736 2021] [core:notice] [pid 17736:tid 564] AH00094: Command line: 'C:\\Users\\cleme\\PhpstormProjects\\BrainsThinkTank\\UwAmp\\bin\\apache\\bin\\httpd.exe -d C:/Users/cleme/PhpstormProjects/BrainsThinkTank/UwAmp/bin/apache -f C:\\Users\\cleme\\PhpstormProjects\\BrainsThinkTank\\UwAmp\\bin\\apache\\conf\\httpd.conf'
+[Sat Feb 20 15:05:19.392709 2021] [mpm_winnt:notice] [pid 17736:tid 564] AH00418: Parent: Created child process 16652
+AH00112: Warning: DocumentRoot [C:/Users/J/PhpstormProjects/BrainsThinkTank] does not exist
+[Sat Feb 20 15:05:20.579705 2021] [ssl:warn] [pid 16652:tid 600] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:05:20.580726 2021] [ssl:warn] [pid 16652:tid 600] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+AH00112: Warning: DocumentRoot [C:/Users/J/PhpstormProjects/BrainsThinkTank] does not exist
+[Sat Feb 20 15:05:20.847483 2021] [ssl:warn] [pid 16652:tid 600] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Feb 20 15:05:20.848482 2021] [ssl:warn] [pid 16652:tid 600] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:05:20.848482 2021] [ssl:warn] [pid 16652:tid 600] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Feb 20 15:05:20.978860 2021] [mpm_winnt:notice] [pid 16652:tid 600] AH00354: Child: Starting 64 worker threads.
+[Sat Feb 20 15:06:47.119876 2021] [mpm_winnt:crit] [pid 16652:tid 600] AH02538: Child: Parent process exited abruptly. Child process is ending
+[Sat Feb 20 15:06:50.306439 2021] [ssl:warn] [pid 21524:tid 584] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:06:50.307436 2021] [ssl:warn] [pid 21524:tid 584] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Feb 20 15:06:50.417142 2021] [core:warn] [pid 21524:tid 584] AH00098: pid file C:/Users/cleme/PhpstormProjects/BrainsThinkTank/UwAmp/bin/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Feb 20 15:06:50.529840 2021] [ssl:warn] [pid 21524:tid 584] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Feb 20 15:06:50.529840 2021] [ssl:warn] [pid 21524:tid 584] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:06:50.530840 2021] [ssl:warn] [pid 21524:tid 584] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Feb 20 15:06:50.558763 2021] [mpm_winnt:notice] [pid 21524:tid 584] AH00455: Apache/2.4.18 (Win32) OpenSSL/1.0.2f PHP/7.0.3 configured -- resuming normal operations
+[Sat Feb 20 15:06:50.558763 2021] [mpm_winnt:notice] [pid 21524:tid 584] AH00456: Server built: Jan 28 2016 09:58:25
+[Sat Feb 20 15:06:50.558763 2021] [core:notice] [pid 21524:tid 584] AH00094: Command line: 'C:\\Users\\cleme\\PhpstormProjects\\BrainsThinkTank\\UwAmp\\bin\\apache\\bin\\httpd.exe -d C:/Users/cleme/PhpstormProjects/BrainsThinkTank/UwAmp/bin/apache -f C:\\Users\\cleme\\PhpstormProjects\\BrainsThinkTank\\UwAmp\\bin\\apache\\conf\\httpd.conf'
+[Sat Feb 20 15:06:50.568736 2021] [mpm_winnt:notice] [pid 21524:tid 584] AH00418: Parent: Created child process 21656
+[Sat Feb 20 15:06:51.739760 2021] [ssl:warn] [pid 21656:tid 532] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:06:51.740722 2021] [ssl:warn] [pid 21656:tid 532] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Feb 20 15:06:51.943325 2021] [ssl:warn] [pid 21656:tid 532] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Feb 20 15:06:51.944323 2021] [ssl:warn] [pid 21656:tid 532] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:06:51.944323 2021] [ssl:warn] [pid 21656:tid 532] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Feb 20 15:06:51.976239 2021] [mpm_winnt:notice] [pid 21656:tid 532] AH00354: Child: Starting 64 worker threads.
+[Sat Feb 20 15:06:55.460258 2021] [mpm_winnt:crit] [pid 21656:tid 532] AH02538: Child: Parent process exited abruptly. Child process is ending
+[Sat Feb 20 15:07:03.933708 2021] [ssl:warn] [pid 16756:tid 592] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:07:03.934706 2021] [ssl:warn] [pid 16756:tid 592] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Feb 20 15:07:04.008508 2021] [core:warn] [pid 16756:tid 592] AH00098: pid file C:/Users/cleme/PhpstormProjects/BrainsThinkTank/UwAmp/bin/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Feb 20 15:07:04.145141 2021] [ssl:warn] [pid 16756:tid 592] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Feb 20 15:07:04.146140 2021] [ssl:warn] [pid 16756:tid 592] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:07:04.146140 2021] [ssl:warn] [pid 16756:tid 592] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Feb 20 15:07:04.175062 2021] [mpm_winnt:notice] [pid 16756:tid 592] AH00455: Apache/2.4.18 (Win32) OpenSSL/1.0.2f PHP/7.0.3 configured -- resuming normal operations
+[Sat Feb 20 15:07:04.175062 2021] [mpm_winnt:notice] [pid 16756:tid 592] AH00456: Server built: Jan 28 2016 09:58:25
+[Sat Feb 20 15:07:04.175062 2021] [core:notice] [pid 16756:tid 592] AH00094: Command line: 'C:\\Users\\cleme\\PhpstormProjects\\BrainsThinkTank\\UwAmp\\bin\\apache\\bin\\httpd.exe -d C:/Users/cleme/PhpstormProjects/BrainsThinkTank/UwAmp/bin/apache -f C:\\Users\\cleme\\PhpstormProjects\\BrainsThinkTank\\UwAmp\\bin\\apache\\conf\\httpd.conf'
+[Sat Feb 20 15:07:04.184037 2021] [mpm_winnt:notice] [pid 16756:tid 592] AH00418: Parent: Created child process 12424
+[Sat Feb 20 15:07:05.212754 2021] [ssl:warn] [pid 12424:tid 196] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:07:05.213731 2021] [ssl:warn] [pid 12424:tid 196] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Feb 20 15:07:05.402570 2021] [ssl:warn] [pid 12424:tid 196] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Feb 20 15:07:05.403570 2021] [ssl:warn] [pid 12424:tid 196] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:07:05.403570 2021] [ssl:warn] [pid 12424:tid 196] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Feb 20 15:07:05.433458 2021] [mpm_winnt:notice] [pid 12424:tid 196] AH00354: Child: Starting 64 worker threads.
+[Sat Feb 20 15:07:08.582965 2021] [autoindex:error] [pid 12424:tid 1312] [client ::1:58797] AH01276: Cannot serve directory C:/Users/cleme/PhpstormProjects/BrainsThinkTank/UwAmp/bin/: No matching DirectoryIndex (index.html,index.php,index.php5,index.php6) found, and server-generated directory index forbidden by Options directive
+[Sat Feb 20 15:07:16.984736 2021] [autoindex:error] [pid 12424:tid 1312] [client 127.0.0.1:58800] AH01276: Cannot serve directory C:/Users/cleme/PhpstormProjects/BrainsThinkTank/UwAmp/bin/: No matching DirectoryIndex (index.html,index.php,index.php5,index.php6) found, and server-generated directory index forbidden by Options directive
+[Sat Feb 20 15:08:02.127663 2021] [mpm_winnt:crit] [pid 12424:tid 196] AH02538: Child: Parent process exited abruptly. Child process is ending
+[Sat Feb 20 15:08:05.795132 2021] [ssl:warn] [pid 2168:tid 592] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:08:05.796130 2021] [ssl:warn] [pid 2168:tid 592] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Feb 20 15:08:05.989613 2021] [core:warn] [pid 2168:tid 592] AH00098: pid file C:/Users/cleme/PhpstormProjects/BrainsThinkTank/UwAmp/bin/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Feb 20 15:08:06.113281 2021] [ssl:warn] [pid 2168:tid 592] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Feb 20 15:08:06.113281 2021] [ssl:warn] [pid 2168:tid 592] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:08:06.113281 2021] [ssl:warn] [pid 2168:tid 592] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Feb 20 15:08:06.141206 2021] [mpm_winnt:notice] [pid 2168:tid 592] AH00455: Apache/2.4.18 (Win32) OpenSSL/1.0.2f PHP/7.0.3 configured -- resuming normal operations
+[Sat Feb 20 15:08:06.141206 2021] [mpm_winnt:notice] [pid 2168:tid 592] AH00456: Server built: Jan 28 2016 09:58:25
+[Sat Feb 20 15:08:06.141206 2021] [core:notice] [pid 2168:tid 592] AH00094: Command line: 'C:\\Users\\cleme\\PhpstormProjects\\BrainsThinkTank\\UwAmp\\bin\\apache\\bin\\httpd.exe -d C:/Users/cleme/PhpstormProjects/BrainsThinkTank/UwAmp/bin/apache -f C:\\Users\\cleme\\PhpstormProjects\\BrainsThinkTank\\UwAmp\\bin\\apache\\conf\\httpd.conf'
+[Sat Feb 20 15:08:06.150182 2021] [mpm_winnt:notice] [pid 2168:tid 592] AH00418: Parent: Created child process 20496
+[Sat Feb 20 15:08:07.234524 2021] [ssl:warn] [pid 20496:tid 528] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:08:07.235533 2021] [ssl:warn] [pid 20496:tid 528] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Feb 20 15:08:07.414653 2021] [ssl:warn] [pid 20496:tid 528] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Feb 20 15:08:07.415678 2021] [ssl:warn] [pid 20496:tid 528] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:08:07.415678 2021] [ssl:warn] [pid 20496:tid 528] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Feb 20 15:08:07.446603 2021] [mpm_winnt:notice] [pid 20496:tid 528] AH00354: Child: Starting 64 worker threads.
+[Sat Feb 20 15:08:08.185831 2021] [mpm_winnt:crit] [pid 20496:tid 528] AH02538: Child: Parent process exited abruptly. Child process is ending
+[Sat Feb 20 15:08:14.758753 2021] [ssl:warn] [pid 3408:tid 600] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:08:14.759751 2021] [ssl:warn] [pid 3408:tid 600] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Feb 20 15:08:14.852501 2021] [core:warn] [pid 3408:tid 600] AH00098: pid file C:/Users/cleme/PhpstormProjects/BrainsThinkTank/UwAmp/bin/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Feb 20 15:08:14.968193 2021] [ssl:warn] [pid 3408:tid 600] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Feb 20 15:08:14.968193 2021] [ssl:warn] [pid 3408:tid 600] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:08:14.968193 2021] [ssl:warn] [pid 3408:tid 600] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Feb 20 15:08:15.000107 2021] [mpm_winnt:notice] [pid 3408:tid 600] AH00455: Apache/2.4.18 (Win32) OpenSSL/1.0.2f PHP/7.0.3 configured -- resuming normal operations
+[Sat Feb 20 15:08:15.000107 2021] [mpm_winnt:notice] [pid 3408:tid 600] AH00456: Server built: Jan 28 2016 09:58:25
+[Sat Feb 20 15:08:15.000107 2021] [core:notice] [pid 3408:tid 600] AH00094: Command line: 'C:\\Users\\cleme\\PhpstormProjects\\BrainsThinkTank\\UwAmp\\bin\\apache\\bin\\httpd.exe -d C:/Users/cleme/PhpstormProjects/BrainsThinkTank/UwAmp/bin/apache -f C:\\Users\\cleme\\PhpstormProjects\\BrainsThinkTank\\UwAmp\\bin\\apache\\conf\\httpd.conf'
+[Sat Feb 20 15:08:15.009083 2021] [mpm_winnt:notice] [pid 3408:tid 600] AH00418: Parent: Created child process 17084
+[Sat Feb 20 15:08:16.111244 2021] [ssl:warn] [pid 17084:tid 616] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:08:16.111244 2021] [ssl:warn] [pid 17084:tid 616] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Feb 20 15:08:16.288694 2021] [ssl:warn] [pid 17084:tid 616] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Feb 20 15:08:16.288694 2021] [ssl:warn] [pid 17084:tid 616] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Feb 20 15:08:16.288694 2021] [ssl:warn] [pid 17084:tid 616] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Feb 20 15:08:16.320476 2021] [mpm_winnt:notice] [pid 17084:tid 616] AH00354: Child: Starting 64 worker threads.
+[Sat Feb 20 15:12:37.704189 2021] [autoindex:error] [pid 17084:tid 1308] [client 127.0.0.1:58888] AH01276: Cannot serve directory C:/Users/cleme/PhpstormProjects/BrainsThinkTank/admin/: No matching DirectoryIndex (index.html,index.php,index.php5,index.php6) found, and server-generated directory index forbidden by Options directive
+[Sat Feb 20 15:13:20.839894 2021] [:error] [pid 17084:tid 1308] [client 127.0.0.1:58922] script 'C:/Users/cleme/PhpstormProjects/BrainsThinkTank/evenement.php' not found or unable to stat, referer: http://localhost/index.php
+[Sat Feb 20 15:13:24.307013 2021] [:error] [pid 17084:tid 1308] [client 127.0.0.1:58922] PHP Parse error:  syntax error, unexpected end of file in C:\\Users\\cleme\\PhpstormProjects\\BrainsThinkTank\\articles.php on line 76, referer: http://localhost/index.php
