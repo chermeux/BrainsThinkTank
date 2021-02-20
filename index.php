@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<div id="accueil2">
+<div>
     <?php include("header.php"); ?>
 </div>
 
@@ -28,7 +28,6 @@
                 <div id="rectangle_derniersarticles">
                     <img class="images_article" src="images/articles/<?= $article['image'] ?>" alt="image de l'article <?= $article['titre'] ?>"/>
                     <h3><?= $article['titre'] ?></h3>
-                    <p class="dateDeModif"> <?= $article['datedemotif'] ?></p>
                 </div>
             </a>
         <?php } ?>
@@ -37,13 +36,13 @@
         <h2>Nos prochains événements</h2>
         <?php
         $bdd = new PDO('mysql:host=localhost;dbname=brains;charset=utf8', 'root', 'root');
-        $articles = $bdd->prepare('SELECT * FROM evenements ORDER BY date DESC LIMIT 2');
+        $evenement = $bdd->prepare('SELECT * FROM evenements ORDER BY date DESC LIMIT 2');
         while ($article = $articles->fetch()) { ?>
-            <a href="article.php?id=<?= $article['id']?>" target="_blank">
+            <a href="evenement.php?id=<?= $evenement['id']?>" target="_blank">
                 <div id="rectangle_derniersarticles">
-                    <img class="images_article" src="images/articles/<?= $article['image'] ?>" alt="image de l'article <?= $article['titre'] ?>"/>
-                    <h3><?= $article['titre'] ?></h3>
-                    <p class="dateDeModif"> <?= $article['date'] ?></p>
+                    <img class="images_article" src="images/articles/<?= $evenement['image'] ?>" alt="image de l'article <?= $article['titre'] ?>"/>
+                    <h3><?= $evenement['titre'] ?></h3>
+                    <p class="dateDeModif"> <?= $evenement['date'] ?></p>
                 </div>
             </a>
         <?php } ?>
