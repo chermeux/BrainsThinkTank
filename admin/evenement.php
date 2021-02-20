@@ -1,6 +1,7 @@
 <?php session_start();
 if (! isset($_SESSION["admin"]) or ! $_SESSION["admin"]) {
     header('Location: /../../index.php');
+    exit();
 } ?>
 
 
@@ -203,6 +204,7 @@ WHERE t.id = ?");
         <?php echo $error ?>
     </div>
 <?php endif; ?>
+<h1 class="text-danger">Modifier ou cree evenement</h1>
 <form enctype="multipart/form-data" method="post" action="/admin/evenement.php" class="container border border-secondary border-2 rounded-3 m-5 mx-auto p-2">
     <div class="form-floating mb-3">
         <input id="id" type="text" class="form-control <?php echo $id_valide?>" value="<?php echo $id_val?>" name="id" readonly>

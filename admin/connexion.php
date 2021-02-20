@@ -64,6 +64,7 @@ if (isset($_POST['deconnexion'])) {
             <?php echo $error ?>
         </div>
     <?php endif; ?>
+    <h1 class="text-center">Connection / Deconection</h1>
     <div class="alert alert-info container border border-info m-5 mx-auto" role="alert">
         Cette page est reserver au administateur du site si vous en etes pas un merci de revenir a la <a href="../index.php" class="alert-link">Page principale</a>
     </div>
@@ -88,6 +89,17 @@ if (isset($_POST['deconnexion'])) {
         <input type="hidden" name="deconnexion" value="1">
         <input type="submit" class="btn btn-primary" value="deconnexion">
     </form>
+
+    <div class="container border border-secondary border-2 rounded-3 m-5 mx-auto p-2">
+        <h2>
+            Administration
+        </h2>
+        <ul class="list-group">
+            <a href="evenement.php"><li class="list-group-item">Ajouté évènement</li></a>
+            <a href="editUser.php"><li class="list-group-item">Crée utilisateur</li></a>
+        </ul>
+
+    </div>
     <?php endif ?>
 </body>
 </html>
