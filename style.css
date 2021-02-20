@@ -146,6 +146,11 @@ ul
     flex-direction: row;
 }
 
+#bas_footer p
+{
+    margin-right: 50px;
+}
+
 footer a
 {
     color:white;
