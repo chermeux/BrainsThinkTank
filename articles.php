@@ -1,15 +1,8 @@
 <?php
-$bdd = new PDO("mysql:host=localhost;dbname=", "root", "");
+$bdd = new PDO("mysql:host=localhost;dbname=brains", "root", "root");
 if (isset($_GET['s'])) {
-    $req = $bdd->prepare("select * from articles
-                                where match(Titre, texte) against ('?' IN BOOLEAN MODE)
-                                order by match(Titre, texte) against ('?' IN BOOLEAN MODE) DESC
-                                LIMIT 20");
-    $req->execute([$_GET['s'],$_GET['s']]);
-}
-else {
-    $req = $bdd->prepare("select * from ARTICLES order by DATEDERMODIF DESC limit 20");
-    $req->execute();
+    $req = $bdd->prepare("SELECT * FROM articles WHERE MATCH (texte) AGAINST (? IN NATURAL LANGUAGE MODE) LIMIT 20;");
+    $req->execute([$_GET['terme']]);
 }
 ?>
 
@@ -31,40 +24,37 @@ else {
 <div>
     <div id="barre_de_recherche">
         <form action ="" method = "get" enctype="multipart/form-data">
-            <input type = "search" name = "terme">
-            <input type = "submit" name = "s" value = "Rechercher">
+            <input type = "search" name = "terme"/>
+            <input type = "submit" name = "s" value = "Rechercher"/>
         </form>
         <?php
-        while($terme_trouve = $req->fetch())
-        {?>
-
-            <a href="article.php?article=<?php $terme_trouve['ID'] ?>" target="_blank">;
-                <div id="rectangle_derniersarticles">
-                    <img class="images_article" src="images/articles/<?php $terme_trouve['IMAGE'] ?>"/>
-                    <h3><?php $terme_trouve['TITRE'] ?></h3>
-                    <p class="dateDeModif"> <?php $terme_trouve['DATEDERMODIF'] ?></p>
-                </div>
-            </a>
-        <?php}
-
-        ?>
+        if(isset($req) AND !empty($req))
+        {
+            while($terme_trouve = $req->fetch()) { ?>
+                <a href="article.php?article=<?php echo $terme_trouve['id'];?>" target="_blank">
+                    <div id="rectangle_derniersarticles">
+                        <img class="images_articles" src="<?php echo $terme_trouve['image']; ?>"/>
+                        <h3><?php echo $terme_trouve['titre']; ?></h3>
+                        <p class="Date"> <?php echo $terme_trouve['datedermodif']; ?></p>
+                    </div>
+                </a>
+            <?php }
+        } ?>
     </div>
-    <h2>Tous nos articles ! </h2>
+    <h2>Tous nos articles !</h2>
     <article>
         <?php
-        $articles = $bdd->prepare('SELECT * FROM ARTICLES');
+        $articles = $bdd->prepare('SELECT * FROM articles');
         $articles->execute();
-        while($arti = $articles->fetch())
-        {?>
-            <a href="article.php?article=<?php $arti['ID'] ?>" target="_blank">
+        while($arti = $articles->fetch()) { ?>
+            <a href="article.php?article=<?php echo $arti['id']; ?>" target="_blank">
                 <div id="rectangle_derniersarticles">
-                    <img class="images_article" src="images/articles/<?php $arti['IMAGE'] ?>"/>
-                    <h3><?php $arti['TITRE'] ?></h3>
-                    <p class="dateDeModif"> <?php $arti['DATEDERMODIF'] ?></p>
+                    <img class="images_articles" src="<?php echo $arti['image']; ?>"/>
+                    <h3><?php echo $arti['titre']; ?></h3>
+                    <p class="Date"> <?php echo $arti['datedermodif']; ?></p>
                 </div>
             </a>
-        <?php}
-        ?>
+        <?php } ?>
     </article>
 </div>
 

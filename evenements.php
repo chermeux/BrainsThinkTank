@@ -48,7 +48,7 @@ if (isset($_GET['s'])) {
             $evenements->execute();
             while($event = $evenements->fetch()) { ?>
                <a href="evenement.php?evenement=<?php echo $event['id']; ?>" target="_blank">
-                    <div id="rectangle_derniersarticles">
+                    <div id="rectangle_derniersevenements">
                         <img class="images_evenement" src="<?php echo $event['image']; ?>"/>
                         <h3><?php echo $event['Titre']; ?></h3>
                         <p class="Date"> <?php echo $event['date']; ?></p>
