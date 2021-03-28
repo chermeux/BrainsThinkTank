@@ -1,13 +1,3 @@
-evenements
-evenement
-articles
-article
-add-user
-
-gestion user
-changer-mdp
-
-add-evenement a corriger
 add-articles
 + cacher evenement
 + deco automatique 1j

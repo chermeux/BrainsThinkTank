@@ -97,6 +97,7 @@ if (isset($_POST['deconnexion'])) {
         <ul class="list-group">
             <a href="evenement.php"><li class="list-group-item">Ajouté évènement</li></a>
             <a href="editUser.php"><li class="list-group-item">Crée utilisateur</li></a>
+            <a href="liste_user.php"><li class="list-group-item">Liste des utilisateur</li></a>
         </ul>
 
     </div>

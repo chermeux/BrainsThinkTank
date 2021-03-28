@@ -17,12 +17,12 @@ if (isset($_GET['id'])) {
     $req = $bdd->prepare("SELECT * from evenements where id = ?");
     $req->execute(array($_GET["id"]));
     if (! ($data = $req->fetch())) {
-        $error = "Evenement non trouver";
+        $error = "article non trouver";
     }
     else {
         $titre_val = $data["Titre"];
         $texte_val = $data["texte"];
-        $ar = preg_split("/-/", $data["date"]);
+        $ar = preg_split("/-/", $data["datedermodif"]);
         $date_val = $ar[1] . "/" . $ar[2] . "/" . $ar[0];
         $lieu_val = $data["lieu"];
     }

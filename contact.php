@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="style_contact.css"/>
     <link rel="stylesheet" media="screen and (max-width: 1280px)" href="style_petitecran.css"/>
-    <link rel="shortcut icon" href="images/1_generales/logo_brains.ico" /> <!-- TODO mettre l'image dans le dossier et créer le dossier -->
+    <link rel="shortcut icon" href="images/1_generales/logoAgora.ico" />
     <title>Agora</title>
 </head>
 
