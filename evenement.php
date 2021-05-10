@@ -1,5 +1,5 @@
 <?php
-$bdd = new PDO("mysql:host=localhost;dbname=brains", "root", "");
+$bdd = new PDO("mysql:host=localhost;dbname=brains", "root", "root");
 if(isset($_GET['evenement']) AND !empty($_GET['evenement']))
 {
         $evenement = (int) $_GET['evenement'];
