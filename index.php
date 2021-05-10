@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style_article.css"/>
+    <link rel="stylesheet" href="styleEvenement.css"/>
     <link rel="stylesheet" media="screen and (max-width: 1280px)" href="style_petitecran.css"/>
     <link rel="shortcut icon" href="images/1_generales/logoAgora.ico"/>
     <title>Agora</title>
@@ -41,7 +43,7 @@
             <a href="evenement.php?id=<?= $evenement['id']?>" target="_blank">
                 <div id="rectangle_derniersarticles">
                     <img class="images_article" src="images/articles/<?= $evenement['image'] ?>" alt="image de l'article <?= $article['titre'] ?>"/>
-                    <h3><?= $evenement['titre'] ?></h3>
+                    <h3><?= $evenement['Titre'] ?></h3>
                     <p class="dateDeModif"> <?= $evenement['date'] ?></p>
                 </div>
             </a>

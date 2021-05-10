@@ -3,7 +3,7 @@ $bdd = new PDO("mysql:host=localhost;dbname=", "root", "");
 if(isset($_GET['evenement']) AND !empty($_GET['evenement']))
 {
         $evenement = (int) $_GET['evenement'];
-        $evenements = $bdd->prepare('SELECT * FROM EVENEMENTS WHERE ID = ?');
+        $evenements = $bdd->prepare('SELECT * FROM evenements WHERE id = ?');
         $evenements->execute([$evenement]);
         $event = $evenements->fetch();
 }
@@ -26,18 +26,18 @@ if(isset($_GET['evenement']) AND !empty($_GET['evenement']))
 
     <div>
         <?php
-            $evenements = $bdd->prepare('SELECT * FROM EVENEMENTS WHERE ID = ?');
+            $evenements = $bdd->prepare('SELECT * FROM evenements WHERE id = ?');
             $evenements->execute([$_GET['ID']]);
             $event = $evenements->fetch();
         ?>
-        <h2><?php $event['TITRE'] ?></h2>
+        <h2><?php $event['Titre'] ?></h2>
         <article>
-            <?php $event['IMAGE'] ?>
-            <?php $event['DATE']?>
-            <?php $event['LIEU']?>
+            <?php $event['image'] ?>
+            <?php $event['date']?>
+            <?php $event['lieu']?>
         </article>
         <article>
-            <?php $event['TEXTE']?>
+            <?php $event['texte']?>
         </article>
     </div>
 
