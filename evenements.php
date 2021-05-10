@@ -43,7 +43,7 @@ if (isset($_GET['s'])) {
             } ?>
         </div>
         <h2>Tous nos événements !</h2>
-        <article>
+        <article id="rectangle_évenements">
             <?php
             $evenements = $bdd->prepare('SELECT * FROM EVENEMENTS');
             $evenements->execute();

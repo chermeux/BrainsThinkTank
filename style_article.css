@@ -1,9 +1,15 @@
+#rectangle_évenements
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #rectangle_derniersarticles
 {
     display: flex;
     flex-direction: column;
     border: 1px rgb(74, 138, 236) solid;
-    width: 450px;
+    width: 600px;
     height: 300px;
     margin-left: 50px;
     margin-bottom: 20px;

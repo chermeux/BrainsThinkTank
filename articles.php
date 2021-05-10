@@ -42,7 +42,7 @@ if (isset($_GET['s'])) {
         } ?>
     </div>
     <h2>Tous nos articles !</h2>
-    <article>
+    <article id="c">
         <?php
         $articles = $bdd->prepare('SELECT * FROM articles');
         $articles->execute();
