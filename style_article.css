@@ -2,8 +2,19 @@
 {
     display: flex;
     flex-direction: column;
+    border: 1px rgb(74, 138, 236) solid;
+    width: 450px;
+    height: 300px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 6px 6px 6px rgb(229,228,229);
 }
 
+#rectangle_derniersarticles:hover
+{
+    box-shadow: 7px 7px 6px rgba(0,0,0,.15);
+}
 #images_articles
 {
     max-width: 100%;
