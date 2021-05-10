@@ -1,5 +1,5 @@
 <?php
-$bdd = new PDO("mysql:host=localhost;dbname=", "root", "");
+$bdd = new PDO("mysql:host=localhost;dbname=brains", "root", "");
 if(isset($_GET['evenement']) AND !empty($_GET['evenement']))
 {
         $evenement = (int) $_GET['evenement'];
@@ -26,6 +26,7 @@ if(isset($_GET['evenement']) AND !empty($_GET['evenement']))
 
     <div>
         <?php
+            $bdd = new PDO("mysql:host=localhost;dbname=brains", "root", "");
             $evenements = $bdd->prepare('SELECT * FROM evenements WHERE id = ?');
             $evenements->execute([$_GET['ID']]);
             $event = $evenements->fetch();
