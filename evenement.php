@@ -26,10 +26,10 @@ if(isset($_GET['evenement']) AND !empty($_GET['evenement']))
 
     <div>
         <?php
-            $bdd = new PDO("mysql:host=localhost;dbname=brains", "root", "");
-            $evenements = $bdd->prepare('SELECT * FROM evenements WHERE id = ?');
-            $evenements->execute([$_GET['ID']]);
-            $event = $evenements->fetch();
+        $bdd = new PDO("mysql:host=localhost;dbname=brains", "root", "root");
+        $evenements = $bdd->prepare('SELECT * FROM evenements WHERE id = ?');
+        $evenements->execute([$_GET['id']]);
+        $event = $evenements->fetch();
         ?>
         <h2><?php $event['Titre'] ?></h2>
         <article>

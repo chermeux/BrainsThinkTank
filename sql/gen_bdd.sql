@@ -11,16 +11,6 @@ create table articles
     datedermodif datetime default CURRENT_TIMESTAMP not null
 );
 
-create table clubs
-(
-    id           int                                not null
-        primary key,
-    image        varchar(255)                       null,
-    nom          varchar(255)                       not null,
-    texte        longtext                           null,
-    datedermodif datetime default CURRENT_TIMESTAMP null
-);
-
 create table evenements
 (
     id    int          not null
