@@ -6,24 +6,17 @@
     * MOTSDEPASSE
     * MAIL
 # LOG
-# EVENEMENT
+# evenements
     * ID
     * IMAGE
     * TITRE
     * TEXTE
     * DATE
     * LIEU
-    * LIEN
-# ARTICLES
+
+# articles
     * ID
     * IMAGE
     * TITRE
-    * TEXTE
-    * DATEDERMODIF
-    * LIEN
-# CLUBS
-    * ID
-    * IMAGE
-    * NOM
     * TEXTE
     * DATEDERMODIF
