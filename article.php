@@ -26,8 +26,9 @@ if(isset($_GET['article']) AND !empty($_GET['article']))
 
     <div>
         <?php
-            $articles = $bdd->prepare('SELECT * FROM articles WHERE id = ?');
-            $articles->execute(array($_GET['id']));
+            $bdd = new PDO("mysql:host=localhost;dbname=brains", "root", "root");
+            $articles = $bdd->prepare('SELECT titre, image, datedermodif, texte FROM articles WHERE id = :id');
+            $articles->execute(array('id' => $_GET['id']));
             $arti = $articles->fetch();
         ?>
         <h2><?php $arti['titre'] ?></h2>
