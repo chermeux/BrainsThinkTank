@@ -1,9 +1,9 @@
 <?php
-$bdd = new PDO("mysql:host=localhost;dbname=", "root", "");
+$bdd = new PDO("mysql:host=localhost;dbname=brains", "root", "root");
 if(isset($_GET['article']) AND !empty($_GET['article']))
 {
         $article = (int) $_GET['article'];
-        $articles = $bdd->prepare('SELECT * FROM ARTICLES WHERE ID = ?');
+        $articles = $bdd->prepare('SELECT * FROM articles WHERE id = ?');
         $articles->execute([$article]);
         $arti = $articles->fetch();
 }
@@ -26,17 +26,17 @@ if(isset($_GET['article']) AND !empty($_GET['article']))
 
     <div>
         <?php
-            $articles = $bdd->prepare('SELECT * FROM ARTICLES WHERE ID = ?');
-            $articles->execute([$_GET['ID']]);
+            $articles = $bdd->prepare('SELECT * FROM articles WHERE id = ?');
+            $articles->execute([$_GET['id']]);
             $arti = $articles->fetch();
         ?>
-        <h2><?php $arti['TITRE'] ?></h2>
+        <h2><?php $arti['titre'] ?></h2>
         <article>
-            <?php $arti['IMAGE'] ?>
-            <?php $arti['DATEDERMODIF']?>
+            <?php $arti['image'] ?>
+            <?php $arti['datedermodif']?>
         </article>
         <article>
-            <?php $arti['TEXTE']?>
+            <?php $arti['texte']?>
         </article>
     </div>
 
