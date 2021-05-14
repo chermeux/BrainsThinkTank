@@ -27,7 +27,7 @@ if(isset($_GET['article']) AND !empty($_GET['article']))
     <div>
         <?php
             $articles = $bdd->prepare('SELECT * FROM articles WHERE id = ?');
-            $articles->execute([$_GET['id']]);
+            $articles->execute(array($_GET['id']));
             $arti = $articles->fetch();
         ?>
         <h2><?php $arti['titre'] ?></h2>
