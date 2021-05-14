@@ -28,7 +28,7 @@ if(isset($_GET['evenement']) AND !empty($_GET['evenement']))
         <?php
         $bdd = new PDO("mysql:host=localhost;dbname=brains", "root", "root");
         $evenements = $bdd->prepare('SELECT * FROM evenements WHERE id = ?');
-        $evenements->execute([$_GET['id']]);
+        $evenements->execute(array($_GET['id']));
         $event = $evenements->fetch();
         ?>
         <h2><?php $event['Titre'] ?></h2>

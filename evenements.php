@@ -45,7 +45,7 @@ if (isset($_GET['s'])) {
         <h2>Tous nos événements !</h2>
         <article id="rectangle_évenements">
             <?php
-            $evenements = $bdd->prepare('SELECT * FROM EVENEMENTS');
+            $evenements = $bdd->prepare('SELECT * FROM evenements');
             $evenements->execute();
             while($event = $evenements->fetch()) { ?>
                <a href="evenement.php?evenement=<?php echo $event['id']; ?>" target="_blank">
