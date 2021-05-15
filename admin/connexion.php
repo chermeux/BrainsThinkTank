@@ -35,11 +35,11 @@ if (isset($_POST["connexion"])) {
 }
 if (isset($_POST['deconnexion'])) {
     if (! isset($_SESSION["admin"]) or ! $_SESSION["admin"]) {
-        $error = "Vous n'etes pas connecter vous ne pouver donc pas vous deconecter";
+        $error = "Vous n'êtes pas connecté vous ne pouvez donc pas vous deconnecter";
     }
     else{
         $_SESSION["admin"] = FALSE;
-        $message = "Deconnexion Reussi";
+        $message = "Deconnexion Reussie";
     }
 }
 
@@ -66,7 +66,7 @@ if (isset($_POST['deconnexion'])) {
     <?php endif; ?>
     <h1 class="text-center">Connexion / Déconnexion</h1>
     <div class="alert alert-info container border border-info m-5 mx-auto" role="alert">
-        Cette page est reservée aux administrateurs du site si vous n'en êtes pas un, merci de revenir a la <a href="../index.php" class="alert-link">Page principale</a>
+        Cette page est reservée aux administrateurs du site si vous n'en êtes pas un, merci de revenir à la <a href="../index.php" class="alert-link">Page principale</a>
     </div>
     <?php if (! isset($_SESSION["admin"]) || ! $_SESSION["admin"]): ?>
     <form method="post" action="/admin/connexion.php" class="container border border-secondary border-2 rounded-3 m-5 mx-auto p-2">
@@ -95,9 +95,9 @@ if (isset($_POST['deconnexion'])) {
             Administration
         </h2>
         <ul class="list-group">
-            <a href="evenement.php"><li class="list-group-item">Ajouté évènement</li></a>
-            <a href="editUser.php"><li class="list-group-item">Crée utilisateur</li></a>
-            <a href="liste_user.php"><li class="list-group-item">Liste des utilisateur</li></a>
+            <a href="evenement.php"><li class="list-group-item">Ajouter évènement</li></a>
+            <a href="editUser.php"><li class="list-group-item">Créer utilisateur</li></a>
+            <a href="liste_user.php"><li class="list-group-item">Liste des utilisateurs</li></a>
         </ul>
 
     </div>
