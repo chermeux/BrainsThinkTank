@@ -2,15 +2,15 @@
 
 <?php
 if (isset($_POST["connexion"])) {
-    # Teste de la validite de lemail et du mot de passe
+    # Test de la validite de lemail et du mot de passe
     $email_valide = TRUE;
     $password_valide = TRUE;
     if (!isset($_POST["email"]) or !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
         $email_valide = FALSE;
-        $error = "Email erroner ou non definie";
+        $error = "Erreur Email";
     } else if (!isset($_POST["password"])) {
         $password_valide = FALSE;
-        $error = "Mots de passe non definie";
+        $error = "Erreur Mot de Passe";
     }
 
     #Confirmation du MDP dans la base de donne
@@ -20,14 +20,14 @@ if (isset($_POST["connexion"])) {
         $req->execute(array($_POST['email']));
         if ($donne = $req->fetch()) {
             if (password_verify($_POST["password"], $donne["password"])) {
-                $message = "Connection reusie";
+                $message = "Connexion reussie";
                 $_SESSION["admin"] = TRUE;
             } else {
-                $error = "Mot de pass invalid";
+                $error = "Mauvais Mot de passe";
                 $password_valide = FALSE;
             }
         } else {
-            $error = "Email invalid";
+            $error = "Mauvais Email";
             $email_valide = FALSE;
         }
 

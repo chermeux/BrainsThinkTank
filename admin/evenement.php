@@ -209,7 +209,7 @@ if (isset($_POST['new'])) {
         <?php echo $error ?>
     </div>
 <?php endif; ?>
-<h1 class="text-center">Modifier ou cree evenement</h1>
+<h1 class="text-center">Modifier ou creer evenement</h1>
 <form enctype="multipart/form-data" method="post" action="/admin/evenement.php" class="container border border-secondary border-2 rounded-3 m-5 mx-auto p-2">
     <div class="form-floating mb-3">
         <input id="id" type="text" class="form-control <?php echo $id_valide?>" value="<?php echo $id_val?>" name="id" readonly>

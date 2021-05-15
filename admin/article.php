@@ -14,10 +14,10 @@ $hidden_val = false;
 if (isset($_GET['id'])) {
     $id_val = $_GET['id'];
     $bdd = new PDO('mysql:host=localhost;dbname=brains;charset=utf8', 'root', 'root');
-    $req = $bdd->prepare("SELECT * from evenements where id = ?");
+    $req = $bdd->prepare("SELECT * from articles where id = ?");
     $req->execute(array($_GET["id"]));
     if (! ($data = $req->fetch())) {
-        $error = "article non trouver";
+        $error = "article non trouvé";
     }
     else {
         $titre_val = $data["Titre"];
@@ -105,7 +105,7 @@ if (isset($_POST['new'])) {
     elseif (isset($_POST['id']) and $_POST['id'] == -1) {
         $fichier_valide = "is-invalid";
         $update = FALSE;
-        $error = "Image n'essesaire pour la creation de nouveau evenement";
+        $error = "Image nessesaire pour la creation de nouveau article";
     }
 
     if (isset($_POST['texte'])) {
@@ -156,7 +156,7 @@ if (isset($_POST['new'])) {
             $uploaddir = $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "/uploads/";
             $uploadfile = $uploaddir . rand(100000000,1000000000) . "." . $ext;
             move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile);
-            $req = $bdd->prepare("INSERT INTO brains.evenements (id, image, Titre, texte, date, lieu)
+            $req = $bdd->prepare("INSERT INTO brains.articles (id, image, Titre, texte, date, lieu)
                 VALUES (null, ?, ?, ?, str_to_date(?,'%m/%d/%Y'), ?);");
             $req->execute(array($uploadfile, $titre_val, $texte_val, $date_val, $lieu_val));
         }
@@ -165,7 +165,7 @@ if (isset($_POST['new'])) {
                 $uploaddir = '\\uploads\\';
                 $uploadfile = $uploaddir . rand(1000000000) . "." . $ext;
                 move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile);
-                $req = $bdd->prepare("UPDATE brains.evenements t
+                $req = $bdd->prepare("UPDATE brains.articles t
                 SET t.image = ?,
                     t.Titre = ?,
                     t.texte = ?,
@@ -176,7 +176,7 @@ if (isset($_POST['new'])) {
                 $req->execute(array($uploadfile, $titre_val, $texte_val, $date_val, $lieu_val, $hidden_val, $id_val));
             }
             else {
-                $req = $bdd->prepare("UPDATE brains.evenements t
+                $req = $bdd->prepare("UPDATE brains.articles t
                 SET t.Titre = ?,
                     t.texte = ?,
                     t.date  = str_to_date(?,'%m/%d/%Y'),
@@ -209,8 +209,8 @@ if (isset($_POST['new'])) {
         <?php echo $error ?>
     </div>
 <?php endif; ?>
-<h1 class="text-center">Modifier ou cree evenement</h1>
-<form enctype="multipart/form-data" method="post" action="/admin/evenement.php" class="container border border-secondary border-2 rounded-3 m-5 mx-auto p-2">
+<h1 class="text-center">Modifier ou creer un article</h1>
+<form enctype="multipart/form-data" method="post" action="/admin/article.php" class="container border border-secondary border-2 rounded-3 m-5 mx-auto p-2">
     <div class="form-floating mb-3">
         <input id="id" type="text" class="form-control <?php echo $id_valide?>" value="<?php echo $id_val?>" name="id" readonly>
         <label for="id" class="form-label">Id</label>
@@ -224,7 +224,7 @@ if (isset($_POST['new'])) {
         <input type="hidden" name="MAX_FILE_SIZE" value="128000000" required>
         <input class="form-control <?php echo $fichier_valide?>" type="file" id="fichier" name="image" value="">
     </div>
-    <label for="editor">Texte de l'evenement</label>
+    <label for="editor">Texte de l'article</label>
     <textarea name="texte" id="editor">
         <?php echo $texte_val?>
     </textarea>

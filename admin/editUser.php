@@ -20,7 +20,7 @@ if (isset($_GET['id'])) {
     $req = $bdd->prepare("SELECT name, email from user where id = ?");
     $req->execute(array($_GET["id"]));
     if (! ($data = $req->fetch())) {
-        $error = "Evenement non trouver";
+        $error = "Evenement non trouvé";
     }
     else {
         $user_val = $data["name"];
@@ -79,7 +79,7 @@ t.PASSWORD = ?
 WHERE t.id = ?");
             $req->execute(array($user_val, $email_val, password_hash($password_val, PASSWORD_DEFAULT )));
         }
-        $message = "Modification effectuer";
+        $message = "Modification effectuée";
     }
 }
 
@@ -105,7 +105,7 @@ WHERE t.id = ?");
     </div>
 <?php endif; ?>
 <h1 class="text-center">Editer un utilisateur</h1>
-<form enctype="multipart/form-data" method="post" action="/admin/evenement.php" class="container border border-secondary border-2 rounded-3 m-5 mx-auto p-2">
+<form enctype="multipart/form-data" method="post" action="/admin/connexion.php" class="container border border-secondary border-2 rounded-3 m-5 mx-auto p-2">
     <div class="form-floating mb-3">
         <div class="form-floating mb-3">
             <input id="id" type="text" class="form-control" value="<?php echo $id_val ?>" name="id" readonly>

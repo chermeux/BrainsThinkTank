@@ -28,16 +28,16 @@ if(isset($_GET['article']) AND !empty($_GET['article']))
         <?php
             $bdd = new PDO("mysql:host=localhost;dbname=brains", "root", "root");
             $articles = $bdd->prepare('SELECT * FROM articles WHERE id = ?');
-            $articles->execute(array($_GET['id']));
+            $articles->execute(array($_GET['article']));
             $arti = $articles->fetch();
         ?>
-        <h2><?php $arti['titre'] ?></h2>
+        <h2><?php echo $arti['titre']; ?></h2>
         <article>
-            <?php $arti['image'] ?>
-            <?php $arti['datedermodif']?>
+            <?php echo $arti['image']; ?>
+            <?php echo $arti['datedermodif']; ?>
         </article>
         <article>
-            <?php $arti['texte']?>
+            <?php echo $arti['texte']; ?>
         </article>
     </div>
 
