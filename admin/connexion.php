@@ -64,9 +64,9 @@ if (isset($_POST['deconnexion'])) {
             <?php echo $error ?>
         </div>
     <?php endif; ?>
-    <h1 class="text-center">Connection / Deconection</h1>
+    <h1 class="text-center">Connexion / Déconnexion</h1>
     <div class="alert alert-info container border border-info m-5 mx-auto" role="alert">
-        Cette page est reserver au administateur du site si vous en etes pas un merci de revenir a la <a href="../index.php" class="alert-link">Page principale</a>
+        Cette page est reservée aux administrateurs du site si vous n'en êtes pas un, merci de revenir a la <a href="../index.php" class="alert-link">Page principale</a>
     </div>
     <?php if (! isset($_SESSION["admin"]) || ! $_SESSION["admin"]): ?>
     <form method="post" action="/admin/connexion.php" class="container border border-secondary border-2 rounded-3 m-5 mx-auto p-2">

@@ -1,5 +1,5 @@
 <?php
-$bdd = new PDO("mysql:host=localhost;dbname=brains", "root", "root");
+$bdd = new PDO("mysql:host=localhost;dbname=brains;charset=utf8", "root", "root");
 if (isset($_GET['s'])) {
     $reqDeux = $bdd->prepare("SELECT * FROM evenements WHERE MATCH (texte) AGAINST (? IN NATURAL LANGUAGE MODE) LIMIT 20;");
     $reqDeux->execute([$_GET['terme']]);
