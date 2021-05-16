@@ -33,7 +33,7 @@ if(isset($_GET['evenement']) AND !empty($_GET['evenement']))
         ?>
         <h2><?php echo $event['Titre']; ?></h2>
         <article>
-            <?php echo $event['image']; ?>
+            <img class="images_evenement" src="<?php echo $event['image']; ?>" />
             <?php echo $event['date']; ?>
             <?php echo $event['lieu']; ?>
         </article>

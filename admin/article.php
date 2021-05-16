@@ -89,13 +89,13 @@ if (isset($_POST['new'])) {
             $fichier_valide = "is-invalid";
             $update = FALSE;
             if ($_FILES['image']['error'] == 1 or $_FILES['image']['error'] == 2) {
-                $error = "fichier trop grops";
+                $error = "fichier trop gros";
             }
             elseif ($_FILES['image']['error'] == 3) {
-                $error = "Le fichier n'a pas ete totalement telecharger";
+                $error = "Le fichier n'a pas ete totalement telecharge";
             }
             elseif ($_FILES['image']['error'] == 4) {
-                $error = "Le fichier n'a pas ete telecharger";
+                $error = "Le fichier n'a pas ete telecharge";
             }
             else {
                 $error = "Erreur cote serveur (" ^ $_FILES['image']['error'] ^ ")" ;
@@ -144,7 +144,7 @@ if (isset($_POST['new'])) {
     else {
         $lieu_valide = "is-invalid";
         $update = FALSE;
-        $error = "Lieu non definie";
+        $error = "Lieu non defini";
     }
     if (isset($_POST['hide'])) {
         $hidden_val = true;
@@ -153,7 +153,7 @@ if (isset($_POST['new'])) {
         $bdd = new PDO('mysql:host=localhost;dbname=brains;charset=utf8', 'root', 'root');
         $tdate = ($ar[1] . "-" . $ar[0] . "-" . $ar[2]);
         if ($id_val == -1) {
-            $uploaddir = $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "/uploads/";
+            $uploaddir = $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "/uploads/"; // TODO modifier cette ligne avant la publication et la même dans la page admin de evenement.php
             $uploadfile = $uploaddir . rand(100000000,1000000000) . "." . $ext;
             move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile);
             $req = $bdd->prepare("INSERT INTO brains.articles (id, image, Titre, texte, date, lieu)
@@ -209,7 +209,7 @@ if (isset($_POST['new'])) {
         <?php echo $error ?>
     </div>
 <?php endif; ?>
-<h1 class="text-center">Modifier ou creer un article</h1>
+<h1 class="text-center">Modifier ou créer un article</h1>
 <form enctype="multipart/form-data" method="post" action="/admin/article.php" class="container border border-secondary border-2 rounded-3 m-5 mx-auto p-2">
     <div class="form-floating mb-3">
         <input id="id" type="text" class="form-control <?php echo $id_valide?>" value="<?php echo $id_val?>" name="id" readonly>

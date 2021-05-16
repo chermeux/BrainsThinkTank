@@ -33,7 +33,7 @@ if(isset($_GET['article']) AND !empty($_GET['article']))
         ?>
         <h2><?php echo $arti['titre']; ?></h2>
         <article>
-            <?php echo $arti['image']; ?>
+            <img class="images_article" src="<?php echo $arti['image']; ?>" />
             <?php echo $arti['datedermodif']; ?>
         </article>
         <article>

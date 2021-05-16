@@ -24,12 +24,13 @@
         <h2>Nos derniers articles</h2>
         <?php
         $bdd = new PDO('mysql:host=localhost;dbname=brains;charset=utf8', 'root', 'root');
-        $articles = $bdd->prepare('SELECT * FROM ARTICLES ORDER BY datedermodif DESC LIMIT 2');
+        $articles = $bdd->prepare('SELECT * FROM articles ORDER BY datedermodif DESC LIMIT 2');
+        $articles->execute();
         while ($article = $articles->fetch()) { ?>
-            <a href="article.php?id=<?= $article['id']?>" target="_blank">
+            <a href="article.php?article=<?php echo $article['id']; ?>" target="_blank">
                 <div id="rectangle_derniersarticles">
-                    <img class="images_article" src="images/articles/<?= $article['image'] ?>" alt="image de l'article <?= $article['titre'] ?>"/>
-                    <h3><?= $article['titre'] ?></h3>
+                    <img class="images_article" src=<?php echo $article['image']; ?>" alt="image de l'article <?php echo $article['titre']; ?>"/>
+                    <h3><?php echo $article['titre']; ?></h3>
                 </div>
             </a>
         <?php } ?>
@@ -38,13 +39,14 @@
         <h2>Nos prochains événements</h2>
         <?php
         $bdd = new PDO('mysql:host=localhost;dbname=brains;charset=utf8', 'root', 'root');
-        $evenement = $bdd->prepare('SELECT * FROM evenements ORDER BY date DESC LIMIT 2');
-        while ($article = $articles->fetch()) { ?>
-            <a href="evenement.php?id=<?= $evenement['id']?>" target="_blank">
+        $evenements = $bdd->prepare('SELECT * FROM evenements ORDER BY date DESC LIMIT 2');
+        $evenements->execute();
+        while ($evenement = $evenements->fetch()) { ?>
+            <a href="evenement.php?evenement=<?php echo $evenement['id']; ?>" target="_blank">
                 <div id="rectangle_derniersarticles">
-                    <img class="images_article" src="images/articles/<?= $evenement['image'] ?>" alt="image de l'article <?= $article['titre'] ?>"/>
-                    <h3><?= $evenement['Titre'] ?></h3>
-                    <p class="dateDeModif"> <?= $evenement['date'] ?></p>
+                    <img class="images_article" src="images/articles/<?php echo $evenement['image']; ?>" alt="image de l'article <?php echo $article['titre']; ?>"/>
+                    <h3><?php echo $evenement['Titre']; ?></h3>
+                    <p class="dateDeModif"> <?php echo $evenement['date']; ?></p>
                 </div>
             </a>
         <?php } ?>
